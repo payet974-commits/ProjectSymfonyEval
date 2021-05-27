@@ -1,0 +1,42 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    Vos films présents par recherche id
+{% endblock %}
+
+{% block body %}
+  {% if app.user %}
+    <div class="mb-3">
+        vous etes connecté en tant que {{ app.user.username }}, <a href="{{ path('app_logout') }}">deconnection</a>
+    </div>
+{% endif %}
+ 
+    <h1>
+      Vos films par recherche identifiant nom, genre et acteurs
+
+    </h1>
+    <div class="row">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                         
+                        {{ movies.id }}
+                        {{ movies.name }}
+                        {{ movies.genres }}
+                        {{ movies.actors }}
+                        
+
+                        
+
+
+
+                       
+                      
+                    </h5>
+                   
+                  
+                </div>
+            </div>
+    </div>
+  
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+   
+{% endblock %}
+
+{% block body %}
+   
+    {% if app.user %}
+    <div class="mb-3">
+        vous etes connecté en tant que {{ app.user.username }}, <a href="{{ path('app_logout') }}">deconnection</a>
+    </div>
+{% endif %}
+<h2>A propos</h2>
+<p>Cette application a été réalisée par Gaelle Payet. Pour cet application, a été utilisé des images pour les films et une bibliothèque bootswatch pour faire le CSS.</p>
+<h2>Conditions d'utilisation du site</h2>
+<p>
+Afin d'accéder à la page administrateur vous devez etre connecté en tant qu'administrateur pour gérer votre blibiothèque de gestion de films. 
+Pour accéder à la page de recherche de vos films. Il sera necéssaire de rajouter un identifiant  </p>
+
+
+
+{% endblock %}
